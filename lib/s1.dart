@@ -10,7 +10,9 @@ class S1Notifire extends _$S1Notifire {
 
 
   void updateState(){
-    state++;
+    final oldState = state;
+    state = oldState + 1;
+    final newState = state;
   }
 
 }

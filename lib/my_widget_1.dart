@@ -10,6 +10,18 @@ class MyWidget1 extends ConsumerWidget {
 
     final s1 = ref.watch(s1NotifireProvider);
 
+    ref.listen(
+        s1NotifireProvider,
+        (oldState, newState){
+          ///スナックバーを表示する
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(
+              content: Text('${oldState} から ${newState} へ変更されました'),
+            )
+          );
+        }
+    );
+
     return Column(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
