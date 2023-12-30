@@ -10,7 +10,9 @@ class S2Notifire extends _$S2Notifire {
 
 
 void updateState(){
-    state.add('X');
+  final oldState = state;
+  final newState = [...oldState, 'X'];
+  state = newState;
   }
 
 }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_practice/my_widget_1.dart';
+import 'package:riverpod_practice/my_widget_2.dart';
 
 void main() {
   runApp(ProviderScope(child: const MyApp()));
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         body: const Center(
-          child: MyWidget1(),
+          child: MyWidget2(),
         ),
       ),
     );
