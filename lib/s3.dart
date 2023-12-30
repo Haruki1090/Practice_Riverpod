@@ -10,7 +10,9 @@ class S3Notifire extends _$S3Notifire {
   }
 
 
-  void updateState(){
-    state = '更新されたデータ' as AsyncValue<String>;
+  void updateState()async{
+    state = const AsyncValue.loading();
+    await Future.delayed(const Duration(seconds: 3));
+    state = const AsyncValue.data('新しいデータ');
   }
 }
